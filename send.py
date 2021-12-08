@@ -14,7 +14,7 @@ headers = {
 while True:
   humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
   data = {
-    "temp" : temperature,
-    "hum" : humidity
+    "temp" : int(temperature),
+    "hum" : int(humidity)
   }
   response = requests.post(url, json=data, headers=headers)
