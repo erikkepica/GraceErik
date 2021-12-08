@@ -17,6 +17,4 @@ while True:
     "temp" : temperature,
     "hum" : humidity
   }
-
-response = requests.post(url, json=data, headers=headers)
-print(response.status_code)
+  response = requests.post(url, json=data, headers=headers)
