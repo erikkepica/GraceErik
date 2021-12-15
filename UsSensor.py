@@ -30,7 +30,11 @@ def distance():
     return distance
 
 if __name__ == "__main__":
+  try:
     while True:
         distance = distance()
         print("Izmerjena razdalja je", distance, "cm")
         time.sleep(0.2)
+  except KeyboardInterrupt:
+      print("Uporabnik je pritisnil ctrl + c!")
+      GPIO.cleanup()
