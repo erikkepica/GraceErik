@@ -33,3 +33,4 @@ if __name__ == "__main__":
     while True:
         distance = distance()
         print("Izmerjena razdalja je", distance, "cm")
+        time.sleep(0.2)
