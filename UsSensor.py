@@ -31,6 +31,7 @@ def distance():
 
 if __name__ == "__main__":
   try:
+    print("test")
     while True:
         distance = distance()
         print("Izmerjena razdalja je", distance, "cm")
