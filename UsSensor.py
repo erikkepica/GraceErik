@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BCM)
 trig = 23
 echo = 24
 
-GPIO.setup(trig, GPIO.out)
+GPIO.setup(trig, GPIO.OUT)
 GPIO.setup(echo, GPIO.IN)
 
 def distance():
