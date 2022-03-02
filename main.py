@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import dht as DHT
 import ultra_sonic_sensor as US
-import Adafruit_GPIO_SPI as SPI
+#import Adafruit_GPIO_SPI as SPI
 import Adafruit_SSD1306
 from PIL import Image ,ImageDraw, ImageFont
 import time, subprocess
@@ -52,6 +52,9 @@ try:
     time.sleep(2)
 except KeyboardInterrupt:
   draw.rectangle((0, 0, width, height), outline = 0, fill = 0)
+  disp.image(image)
+  disp.display()
+  GPIO.cleanup()
 
 
 
