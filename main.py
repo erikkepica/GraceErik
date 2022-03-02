@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import dht as DHT
 import ultra_sonic_sensor as US
-#import Adafruit_GPIO_SPI as SPI
+import Adafruit_GPIO_SPI as SPI
 import Adafruit_SSD1306
 from PIL import Image ,ImageDraw, ImageFont
 import time, subprocess

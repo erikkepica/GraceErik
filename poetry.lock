@@ -1,4 +1,17 @@
 [[package]]
+name = "adafruit-blinka"
+version = "7.0.2"
+description = "CircuitPython APIs for non-CircuitPython versions of Python such as CPython on Linux and MicroPython."
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[package.dependencies]
+Adafruit-PlatformDetect = ">=3.13.0"
+Adafruit-PureIO = ">=1.1.7"
+pyftdi = ">=0.40.0"
+
+[[package]]
 name = "adafruit-gpio"
 version = "1.0.3"
 description = "Library to provide a cross-platform GPIO interface on the Raspberry Pi and Beaglebone Black using the RPi.GPIO and Adafruit_BBIO libraries."
@@ -9,6 +22,14 @@ python-versions = "*"
 [package.dependencies]
 adafruit-pureio = "*"
 spidev = "*"
+
+[[package]]
+name = "adafruit-platformdetect"
+version = "3.20.1"
+description = "Platform detection for use by libraries like Adafruit-Blinka."
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
 
 [[package]]
 name = "adafruit-pureio"
@@ -30,6 +51,37 @@ python-versions = "*"
 Adafruit-GPIO = ">=0.6.5"
 
 [[package]]
+name = "pyftdi"
+version = "0.53.3"
+description = "FTDI device driver (pure Python)"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pyserial = ">=3.0"
+pyusb = ">=1.0.0,<1.2.0 || >1.2.0"
+
+[[package]]
+name = "pyserial"
+version = "3.5"
+description = "Python Serial Port Extension"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+cp2110 = ["hidapi"]
+
+[[package]]
+name = "pyusb"
+version = "1.2.1"
+description = "Python USB access module"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[[package]]
 name = "spidev"
 version = "3.5"
 description = "Python bindings for Linux SPI access through spidev"
@@ -40,17 +92,35 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "0b1a8512c905c252b6998f724fee3b907d3c69311ac9b7076944ea1dcd88d016"
+content-hash = "7fee338044bb4b67b07f4ac865aa05e63a027758b513610a458bceaf67c166e4"
 
 [metadata.files]
+adafruit-blinka = [
+    {file = "Adafruit-Blinka-7.0.2.tar.gz", hash = "sha256:a4c714a6304417f60f56f7d6f0dcb869ffe3af1410848c886bdf79cf7412f35f"},
+]
 adafruit-gpio = [
     {file = "Adafruit_GPIO-1.0.3.tar.gz", hash = "sha256:d6465b92c866c51ca8f3bc1e8f2ec36f5ccdb46d0fd54101c1109756d4a2dcd0"},
+]
+adafruit-platformdetect = [
+    {file = "Adafruit-PlatformDetect-3.20.1.tar.gz", hash = "sha256:3f93963ec6d1b1310c72fc3bfeeab4ae3f69ff86de563ff639d5a496554c28cc"},
 ]
 adafruit-pureio = [
     {file = "Adafruit_PureIO-1.1.9.tar.gz", hash = "sha256:2caf22fb07c7f771d83267f331a76cde314723f884a9570ea6f768730c87a879"},
 ]
 adafruit-ssd1306 = [
     {file = "Adafruit_SSD1306-1.6.2.tar.gz", hash = "sha256:4768518204037db82eb6b90838938f8519ecd29fe3d6cc3efa0d1100ed527727"},
+]
+pyftdi = [
+    {file = "pyftdi-0.53.3-py3-none-any.whl", hash = "sha256:6e86880ec6d66389de643ca83de5d59fffea3bd334f492e12fab71a832f878a2"},
+    {file = "pyftdi-0.53.3.tar.gz", hash = "sha256:4ef20c246bdb0f278d283337d7a6e69cf9bdb0ead525e7ad867d9e46ad26e613"},
+]
+pyserial = [
+    {file = "pyserial-3.5-py2.py3-none-any.whl", hash = "sha256:c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0"},
+    {file = "pyserial-3.5.tar.gz", hash = "sha256:3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb"},
+]
+pyusb = [
+    {file = "pyusb-1.2.1-py3-none-any.whl", hash = "sha256:2b4c7cb86dbadf044dfb9d3a4ff69fd217013dbe78a792177a3feb172449ea36"},
+    {file = "pyusb-1.2.1.tar.gz", hash = "sha256:a4cc7404a203144754164b8b40994e2849fde1cfff06b08492f12fff9d9de7b9"},
 ]
 spidev = [
     {file = "spidev-3.5.tar.gz", hash = "sha256:8a7f5c289f161ea2ac4697fa8a10918232c990678dd0053084b3c43b1363910d"},

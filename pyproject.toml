@@ -7,6 +7,7 @@ authors = ["Erikznider <<>>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 Adafruit-SSD1306 = "^1.6.2"
+Adafruit-Blinka = "^7.0.2"
 
 [tool.poetry.dev-dependencies]
 
