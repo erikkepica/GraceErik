@@ -1,0 +1,57 @@
+[[package]]
+name = "adafruit-gpio"
+version = "1.0.3"
+description = "Library to provide a cross-platform GPIO interface on the Raspberry Pi and Beaglebone Black using the RPi.GPIO and Adafruit_BBIO libraries."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+adafruit-pureio = "*"
+spidev = "*"
+
+[[package]]
+name = "adafruit-pureio"
+version = "1.1.9"
+description = "Pure python (i.e. no native extensions) access to Linux IO    including I2C and SPI. Drop in replacement for smbus and spidev modules."
+category = "main"
+optional = false
+python-versions = ">=3.5.0"
+
+[[package]]
+name = "adafruit-ssd1306"
+version = "1.6.2"
+description = "Python library to use SSD1306-based 128x64 or 128x32 pixel OLED displays with a Raspberry Pi or Beaglebone Black."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Adafruit-GPIO = ">=0.6.5"
+
+[[package]]
+name = "spidev"
+version = "3.5"
+description = "Python bindings for Linux SPI access through spidev"
+category = "main"
+optional = false
+python-versions = "*"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.8"
+content-hash = "0b1a8512c905c252b6998f724fee3b907d3c69311ac9b7076944ea1dcd88d016"
+
+[metadata.files]
+adafruit-gpio = [
+    {file = "Adafruit_GPIO-1.0.3.tar.gz", hash = "sha256:d6465b92c866c51ca8f3bc1e8f2ec36f5ccdb46d0fd54101c1109756d4a2dcd0"},
+]
+adafruit-pureio = [
+    {file = "Adafruit_PureIO-1.1.9.tar.gz", hash = "sha256:2caf22fb07c7f771d83267f331a76cde314723f884a9570ea6f768730c87a879"},
+]
+adafruit-ssd1306 = [
+    {file = "Adafruit_SSD1306-1.6.2.tar.gz", hash = "sha256:4768518204037db82eb6b90838938f8519ecd29fe3d6cc3efa0d1100ed527727"},
+]
+spidev = [
+    {file = "spidev-3.5.tar.gz", hash = "sha256:8a7f5c289f161ea2ac4697fa8a10918232c990678dd0053084b3c43b1363910d"},
+]

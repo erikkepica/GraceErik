@@ -1,0 +1,35 @@
+Sensorje obicajno priklopimo na napajanje na RPI 3v3(+) in GND(-).
+
+Nekateri senzorji delujejo na visji napetosti, te povezemo na 5v, pri tem
+moramo zascititi VHODNE signale v RPI, to storimo z napetostni delilnikom (dvema uporoma), 
+ki ustrezno zniza napetost.
+
+### UZ sensor ###
+5v povezemo na 5v!
+Echo --> GPIO19 (napetosti delilnik 330 OHM, 470 OHM)
+Trig --> GPIO26
+
+### DHT11 ###
+v kolikor gledamo v sprednji del sensorja (mrezica) so nogice od LEVE proti DESNI:
+VCC
+DATA --> GPIO4 (upor 10k OHM --> VCC 3v3)
+NC (not connected)
+GND
+
+### Enkoder ###
+5v --> 3v3
+Key --> GPIO27
+S2 --> GPIO5
+S1 -->GPIO17
+
+### Pir sensor ###
+VCC --> 3v3
+s --> GPIO13
+
+### OLED ekran ###
+SDA --> SDA1
+SCL --> SCL1
+
+### LED trak ###
+5v --> 5v
+Din --> GPIO21
